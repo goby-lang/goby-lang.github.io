@@ -18,14 +18,12 @@ const users = [
 const siteConfig = {
   title: 'Goby',
   tagline: 'Inherits from Ruby, extended with Golang',
-  url: 'https://facebook.github.io' /* your website url */,
-  baseUrl: '/test-site/' /* base url for your project */,
-  projectName: 'goby',
+  url: 'https://goby-lang.github.io/' /* your website url */,
+  baseUrl: '/' /* base url for your project */,
+  projectName: 'goby-lang.github.io',
   organizationName: 'goby-lang',
   headerLinks: [
     {doc: 'introduction', label: 'Introduction'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
   users,
