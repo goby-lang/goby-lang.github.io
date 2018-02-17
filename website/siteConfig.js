@@ -16,11 +16,12 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site' /* title for your website */,
-  tagline: 'A website for testing',
+  title: 'Goby',
+  tagline: 'Inherits from Ruby, extended with Golang',
   url: 'https://facebook.github.io' /* your website url */,
   baseUrl: '/test-site/' /* base url for your project */,
-  projectName: 'test-site',
+  projectName: 'goby',
+  organizationName: 'goby-lang',
   headerLinks: [
     {doc: 'introduction', label: 'Introduction'},
     {doc: 'doc4', label: 'API'},
@@ -29,8 +30,8 @@ const siteConfig = {
   ],
   users,
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
+  // headerIcon: 'img/goby-logo.png',
+  // footerIcon: 'img/goby-logo.png',
   favicon: 'img/favicon.png',
   /* colors for website */
   colors: {
@@ -61,7 +62,7 @@ const siteConfig = {
   },
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
-  repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: 'https://github.com/goby-lang/goby',
 };
 
 module.exports = siteConfig;

@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "A website for testing",
+    "tagline": "Inherits from Ruby, extended with Golang",
     "doc3": "This is document number 3",
     "doc4": "Other Document",
     "doc5": "Fifth Document",
