@@ -35,34 +35,27 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+            <a href={this.docUrl('introduction.html', this.props.language)}>
+              Introduction
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
-            </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
+            <a href={this.docUrl('installation.html', this.props.language)}>
+              Installation
             </a>
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
-            <a
-              href="http://stackoverflow.com/questions/tagged/"
+            <a href="https://sample.goby-lang.org"
               target="_blank">
-              Stack Overflow
+              Sample Site
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
-            <a href="https://twitter.com/" target="_blank">
+            <a href="https://goby-lang-slackin.herokuapp.com/">Slack</a>
+            <a href="https://twitter.com/goby_lang" target="_blank">
               Twitter
             </a>
           </div>
           <div>
             <h5>More</h5>
-            <a href={this.props.config.baseUrl + 'blog'}>Blog</a>
+            <a href="https://medium.com/goby-lang">Blog</a>
             <a href="https://github.com/">GitHub</a>
             <a
               className="github-button"
@@ -75,21 +68,6 @@ class Footer extends React.Component {
               Star
             </a>
           </div>
-        </section>
-
-        <a
-          href="https://code.facebook.com/projects/"
-          target="_blank"
-          className="fbOpenSource">
-          <img
-            src={this.props.config.baseUrl + 'img/oss_logo.png'}
-            alt="Facebook Open Source"
-            width="170"
-            height="45"
-          />
-        </a>
-        <section className="copyright">
-          Copyright &copy; {currentYear} Facebook Inc.
         </section>
       </footer>
     );
