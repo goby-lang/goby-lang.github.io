@@ -12,5 +12,5 @@ One of our goal is to provide web developers a sort of small and handy environme
 - Builtin high-performance HTTP server
 - Builtin database library (currently only support PostgreSQL adapter)
 - JSON support
-- [Plugin system](https://goby-lang.gitbooks.io/goby/content/plugin-system.html) that can load existing Go packages dynamically (Only for Linux by now)
+- [Plugin system](plugin_system.md) that can load existing Go packages dynamically (Only for Linux by now)
 - Accessing Go objects from Goby directly
