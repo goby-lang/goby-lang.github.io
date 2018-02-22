@@ -1,0 +1,95 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Plugin System · Goby</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Plugin System · Goby"/><meta property="og:type" content="website"/><meta property="og:url" content="https://goby-lang.github.io/index.html"/><meta property="og:description" content="## Introduction"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Goby</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/docs/introduction.html" target="_self">Introduction</a></li><li><a href="https://github.com/goby-lang/goby" target="_self">GitHub</a></li><li><a href="https://sample.goby-lang.org" target="_self">Sample Site</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Features</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Get Startted</h3><ul><li class="navListItem"><a class="navItem" href="/docs/introduction.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/installation.html">Installation</a></li></ul></div><div class="navGroup navGroupActive"><h3>Features</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/plugin-system.html">Plugin System</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Plugin System</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" name="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p><code>Plugin System</code> is one of the Goby's best feature. It allows you to <a href="#use-existed-go-file-with-use-method-">load and access Go files during runtime</a>. Or you can even use it to <a href="#generate-a-plugin-dynamically-with-generate-method-">compose several Go packages into a custom plugin</a> on the fly, and use it very easily!</p>
+<p>(This feature is currently experimental because it relies on Go's plugin build mode, which is only supported on linux for now. And it also has several prerequisites or restrictions, see the notes section.)</p>
+<h2><a class="anchor" aria-hidden="true" name="usages"></a><a href="#usages" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usages</h2>
+<p>There are two ways to use the Plugin class:</p>
+<h3><a class="anchor" aria-hidden="true" name="use-existed-go-file-with-use-method-"></a><a href="#use-existed-go-file-with-use-method-" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use existed Go file with .use method</h3>
+<p>Assume we already have a plugin.go file</p>
+<pre><code class="hljs css go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">type</span> Bar <span class="hljs-keyword">struct</span> {
+    name <span class="hljs-keyword">string</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">NewBar</span><span class="hljs-params">(name <span class="hljs-keyword">string</span>)</span> <span class="hljs-params">(*Bar, error)</span></span> {
+    <span class="hljs-keyword">return</span> &amp;Bar{name: name}, <span class="hljs-literal">nil</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(b *Bar)</span> <span class="hljs-title">Name</span><span class="hljs-params">()</span> <span class="hljs-title">string</span></span> {
+    <span class="hljs-keyword">return</span> b.name
+}
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {}
+</code></pre>
+<p>And we can call the Bar method in Goby like:</p>
+<pre><code class="hljs css ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"plugin"</span>
+
+p = Plugin.use <span class="hljs-string">"path_to_plugin/plugin.go"</span>
+<span class="hljs-comment"># go_func is the method we use to calling Go's function</span>
+<span class="hljs-comment"># First parameter is the method name, the rest are arguments for that method.</span>
+b, err = p.go_func(<span class="hljs-string">"NewBar"</span>, <span class="hljs-string">"Foo"</span>)
+<span class="hljs-comment"># b is an instance of GoObject and holds *Bar</span>
+name = b.go_func(<span class="hljs-string">"Name"</span>)
+puts(name) <span class="hljs-comment">#=&gt; "Foo"</span>
+</code></pre>
+<p>The following diagram illustrate how Plugin#use worked. The Plugin#use method will compile plugin.go with -buildmode=plugin flag, which will generate a .so file. Then Goby will open that file with Go's plugin package and create a Plugin object.</p>
+<p>Note that the go file needs to be main package. And all the methods, types or variables that will be called from Goby need to be exported.</p>
+<p><img src="/img/plugin-use.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" name="generate-a-plugin-dynamically-with-generate-method-"></a><a href="#generate-a-plugin-dynamically-with-generate-method-" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generate a plugin dynamically with .generate method</h3>
+<p>This usage is very powerful, because you can generate a plugin without writing/having any Go files. Furthermore, you can use import other Go's library into your plugin on the fly.</p>
+<p>Here's an example: We want to use Go's built in sql package with postgresql's adapter package pq. And we want to connect and ping the database see if it's alive.</p>
+<p>First, we generate a plugin called db (you can give your plugin any name)</p>
+<pre><code class="hljs css ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"plugin"</span>
+
+p = Plugin.generate(<span class="hljs-string">"db"</span>)
+</code></pre>
+<p>Then we need to import the <code>sql</code> and <code>pq</code> Go package we need with <code>#import_pkg</code> method. The first argument is the package name (see <a href="https://golang.org/ref/spec#Import_declarations">here</a> for how <code>import</code> works in Go). And the second argument is the package path.</p>
+<pre><code class="hljs css ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"plugin"</span>
+
+p = Plugin.generate(<span class="hljs-string">"db"</span>) <span class="hljs-keyword">do</span> <span class="hljs-params">|p|</span>
+  p.import_pkg(<span class="hljs-string">""</span>, <span class="hljs-string">"database/sql"</span>)
+  p.import_pkg(<span class="hljs-string">"_"</span>, <span class="hljs-string">"github.com/lib/pq"</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Finally, we need to specify what package level methods, types or variables we will use with <code>#link_function</code> method (I might change this to link later).</p>
+<pre><code class="hljs css ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"plugin"</span>
+
+p = Plugin.generate(<span class="hljs-string">"db"</span>) <span class="hljs-keyword">do</span> <span class="hljs-params">|p|</span>
+  p.import_pkg(<span class="hljs-string">""</span>, <span class="hljs-string">"database/sql"</span>)
+  p.import_pkg(<span class="hljs-string">"_"</span>, <span class="hljs-string">"github.com/lib/pq"</span>)
+  p.link_function(<span class="hljs-string">"sql"</span>, <span class="hljs-string">"Open"</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>And you can get a <code>Plugin</code> object presents the plugin you generated. You can also use <code>#go_func</code> to calling methods on it:</p>
+<pre><code class="hljs css ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"plugin"</span>
+
+p = Plugin.generate(<span class="hljs-string">"db"</span>) <span class="hljs-keyword">do</span> <span class="hljs-params">|p|</span>
+  p.import_pkg(<span class="hljs-string">""</span>, <span class="hljs-string">"database/sql"</span>)
+  p.import_pkg(<span class="hljs-string">"_"</span>, <span class="hljs-string">"github.com/lib/pq"</span>)
+  p.link_function(<span class="hljs-string">"sql"</span>, <span class="hljs-string">"Open"</span>)
+<span class="hljs-keyword">end</span>
+
+conn, err = p.go_func(<span class="hljs-string">"Open"</span>, <span class="hljs-string">"postgres"</span>, <span class="hljs-string">"user=postgres dbname=goby_test sslmode=disable"</span>)
+err = conn.go_func(<span class="hljs-string">"Ping"</span>) <span class="hljs-comment"># Go's sql.Ping method returns error if ping failed</span>
+<span class="hljs-keyword">if</span> err
+  puts err
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Similar to <code>Plugin#use</code> method, the following diagram illustrates how <code>Plugin#generate</code> method works. It actually generates a package called <code>db.go</code> according to value passed into the <code>#generate</code> method. Next, it will include the Go packages, linked the package level methods.</p>
+<p>The rest of the details are the same as the <code>Plugin#use</code> method, it compiles the auto-generated Go package, generates the <code>.so</code> file which Goby will open it and then create a <code>Plugin</code> object and assign to the <code>p</code> variable according to the diagram.</p>
+<p><img src="/img/plugin-generate.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" name="notes"></a><a href="#notes" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Notes</h2>
+<ul>
+<li><p>This feature can only run on <code>linux</code> for now, so if you want to play with it I suggest you using docker</p></li>
+<li><p>You need to <a href="https://golang.org/doc/install">setup Go's environment</a> if you want to import Go packages in your plugin. Also, those packages need to be downloaded via <code>go get</code> command. For these reasons, I still recommend using Docker when playing with this feature so you can setup environment via Dockerfile.</p></li>
+<li><p>The plugin binary generation could take a few seconds, so store the <code>Plugin</code> object in a constant might be a good practice.</p></li>
+<li><p>I'll develop other tool to take care the Go's environment setup and package installation, so users can just focus on writing Goby programs.</p></li>
+<li><p>Both <code>Plugin#use</code> and <code>Plugin#generate</code> are not thread safe, so please don't use them on different thread at the same time.</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="installation.html">← Installation</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/introduction.html">Introduction</a><a href="/docs/en/installation.html">Installation</a></div><div><h5>Community</h5><a href="https://sample.goby-lang.org" target="_blank">Sample Site</a><a href="https://goby-lang-slackin.herokuapp.com/">Slack</a><a href="https://twitter.com/goby_lang" target="_blank">Twitter</a></div><div><h5>More</h5><a href="https://medium.com/goby-lang">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/goby-lang/goby" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>
