@@ -76,7 +76,6 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('goby-logo.svg')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
@@ -99,33 +98,70 @@ const Block = props => (
 );
 
 const Features = props => (
-  <Block layout="fourColumn">
+  <div
+    className="productShowcaseSection paddingBottom"
+    style={{textAlign: 'center'}}>
+    <h2>Features</h2>
+    <GridBlock
+      align="center"
+      contents={[
+        {
+          content:
+            `Save time and focus on your project's documentation. Simply
+            write docs and blog posts with [Markdown](${siteConfig.baseUrl}docs/${props.language}/doc-markdown.html)
+            and Docusaurus will publish a set of static html files ready
+            to serve.`,
+          image: `${siteConfig.baseUrl}img/markdown.png`,
+          imageAlign: "top",
+          title: "Concurrency Support"
+        },
+        {
+          content:
+            `[Extend or customize](${siteConfig.baseUrl}docs/${props.language}/api-pages.html)
+            your project's layout by reusing React. Docusaurus can be
+            extended while reusing the same header and footer.`,
+          image: `${siteConfig.baseUrl}img/react.svg`,
+          imageAlign: "top",
+          title: "Builtin Multi-threaded Server"
+        },
+        {
+          content:
+            `[Plugin System](${siteConfig.baseUrl}docs/plugin-system.html) allows you to extend your Goby app with Go packages without writing any Go code`,
+          image: `${siteConfig.baseUrl}img/translation.svg`,
+          imageAlign: "top",
+          title: "Plugin System"
+        }
+      ]}
+      layout="threeColumn"
+    />
+
+  </div>
+);
+
+const Concurrency = props => (
+  <Block background="light">
     {[
       {
-        content: 'This is the content of my feature',
+        content: 'This is another description of how this project is useful',
         image: imgUrl('docusaurus.svg'),
-        imageAlign: 'top',
-        title: 'Feature One',
-      },
-      {
-        content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'top',
-        title: 'Feature Two',
+        imageAlign: 'right',
+        title: 'Description',
       },
     ]}
   </Block>
 );
-
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
-  </div>
+const IGB = props => (
+  <Block id="igb" background="dark">
+    {[
+      {
+        content: '## Try Goby inside `igb`',
+        image: imgUrl('igb.gif'),
+        imageAlign: 'left',
+        title: '# Interactive Console',
+      },
+    ]}
+  </Block>
 );
-
 const LearnHow = props => (
   <Block background="light">
     {[
@@ -139,31 +175,7 @@ const LearnHow = props => (
   </Block>
 );
 
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'left',
-        title: 'Try it Out',
-      },
-    ]}
-  </Block>
-);
 
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Description',
-      },
-    ]}
-  </Block>
-);
 
 const Showcase = props => {
   if ((siteConfig.users || []).length === 0) {
@@ -204,10 +216,9 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
+          <Concurrency />
+          <IGB />
           <LearnHow />
-          <TryOut />
-          <Description />
           <Showcase language={language} />
         </div>
       </div>
