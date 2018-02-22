@@ -24,8 +24,9 @@ const siteConfig = {
   organizationName: 'goby-lang',
   headerLinks: [
     {doc: 'introduction', label: 'Introduction'},
-    {href: 'https://github.com/goby-lang/goby', label: "GitHub"},
     {href: 'https://sample.goby-lang.org', label: "Sample Site"},
+    {href: 'https://github.com/goby-lang/goby', label: "GitHub"},
+    {href: 'https://goby-lang-slackin.herokuapp.com/', label: "Join Slack!"},
 
     // {blog: false, label: 'Blog'},
   ],
