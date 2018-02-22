@@ -24,7 +24,10 @@ const siteConfig = {
   organizationName: 'goby-lang',
   headerLinks: [
     {doc: 'introduction', label: 'Introduction'},
-    {blog: true, label: 'Blog'},
+    {href: 'https://github.com/goby-lang/goby', label: "GitHub"},
+    {href: 'https://sample.goby-lang.org', label: "Sample Site"},
+
+    // {blog: false, label: 'Blog'},
   ],
   users,
   /* path to images for header/footer */

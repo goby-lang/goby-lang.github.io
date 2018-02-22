@@ -4,7 +4,7 @@
       "introduction",
       "installation"
     ],
-    "Second Category": ["doc3"]
+    "Features": ["plugin-system"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
