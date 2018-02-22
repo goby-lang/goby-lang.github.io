@@ -8,9 +8,9 @@
 /* List of projects/orgs using your project for the users page */
 const users = [
   {
-    caption: 'User1',
-    image: '/test-site/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
+    caption: 'Sample site',
+    image: '/img/goby-logo.svg',
+    infoLink: 'https://sample.goby-lang.org',
     pinned: true,
   },
 ];
