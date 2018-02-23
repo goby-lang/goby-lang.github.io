@@ -22,6 +22,8 @@ const siteConfig = {
   baseUrl: '/' /* base url for your project */,
   projectName: 'goby-lang.github.io',
   organizationName: 'goby-lang',
+  ogImage: 'img/goby-logo.png',
+  headerIcon: 'img/goby-logo.svg',
   headerLinks: [
     {doc: 'introduction', label: 'Introduction'},
     {href: 'https://sample.goby-lang.org', label: "Sample Site"},
