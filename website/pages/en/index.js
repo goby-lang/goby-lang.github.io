@@ -114,7 +114,7 @@ const Features = props => (
         },
         {
           content:
-            "Goby has builtin multi-threaded web server called `SimpleServer` with sinatra-like interfaces. We have our [sample site](https://sample.goby-lang.org) built upon it, go check it out!",
+            `Goby has builtin multi-threaded web server called [\`SimpleServer\`](${siteConfig.baseUrl}docs/simple-server.html) with sinatra-like interfaces. We have our [sample site](https://sample.goby-lang.org) built upon it, go check it out!`,
           image: `${siteConfig.baseUrl}img/server.svg`,
           imageAlign: "top",
           title: "Builtin Multi-threaded Server"

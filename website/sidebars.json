@@ -6,7 +6,8 @@
     ],
     "Features": [
       "plugin-system",
-      "thread-and-channel"
+      "thread-and-channel",
+      "simple-server"
     ]
   }
 }
