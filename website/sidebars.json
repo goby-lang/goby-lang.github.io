@@ -4,6 +4,9 @@
       "introduction",
       "installation"
     ],
-    "Features": ["plugin-system"]
+    "Features": [
+      "plugin-system",
+      "thread-and-channel"
+    ]
   }
 }

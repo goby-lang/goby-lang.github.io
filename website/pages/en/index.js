@@ -107,7 +107,7 @@ const Features = props => (
       contents={[
         {
           content:
-            "In Goby you can open a new thread by just using `thread` method, and passing objects between thread using `Channel` object",
+            `In Goby you can open a new thread by just using \`thread\` method, and passing objects between thread using \`Channel\` object (see [Thread and Channel](${siteConfig.baseUrl}docs/thread-and-channel.html) for more details)`,
           image: `${siteConfig.baseUrl}img/concurrency.svg`,
           imageAlign: "top",
           title: "Concurrency Support"
