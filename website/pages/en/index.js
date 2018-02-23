@@ -107,27 +107,22 @@ const Features = props => (
       contents={[
         {
           content:
-            `Save time and focus on your project's documentation. Simply
-            write docs and blog posts with [Markdown](${siteConfig.baseUrl}docs/${props.language}/doc-markdown.html)
-            and Docusaurus will publish a set of static html files ready
-            to serve.`,
-          image: `${siteConfig.baseUrl}img/markdown.png`,
+            "In Goby you can open a new thread by just using `thread` method, and passing objects between thread using `Channel` object",
+          image: `${siteConfig.baseUrl}img/concurrency.svg`,
           imageAlign: "top",
           title: "Concurrency Support"
         },
         {
           content:
-            `[Extend or customize](${siteConfig.baseUrl}docs/${props.language}/api-pages.html)
-            your project's layout by reusing React. Docusaurus can be
-            extended while reusing the same header and footer.`,
-          image: `${siteConfig.baseUrl}img/react.svg`,
+            "Goby has builtin multi-threaded web server called `SimpleServer` with sinatra-like interfaces. We have our [sample site](https://sample.goby-lang.org) built upon it, go check it out!",
+          image: `${siteConfig.baseUrl}img/server.svg`,
           imageAlign: "top",
           title: "Builtin Multi-threaded Server"
         },
         {
           content:
             `[Plugin System](${siteConfig.baseUrl}docs/plugin-system.html) allows you to extend your Goby app with Go packages without writing any Go code`,
-          image: `${siteConfig.baseUrl}img/translation.svg`,
+          image: `${siteConfig.baseUrl}img/plugin.svg`,
           imageAlign: "top",
           title: "Plugin System"
         }
