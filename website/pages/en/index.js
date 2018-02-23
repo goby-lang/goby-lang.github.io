@@ -100,8 +100,7 @@ const Block = props => (
 const Features = props => (
   <div
     className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Features</h2>
+    style={{textAlign: 'center', paddingTop: '70px'}}>
     <GridBlock
       align="center"
       contents={[
@@ -133,32 +132,58 @@ const Features = props => (
   </div>
 );
 
-const Concurrency = props => (
-  <Block background="light">
-    {[
-      {
-        content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Description',
-      },
-    ]}
-  </Block>
+const QuickSetup = props => (
+  <Container 
+    className="imageSmall"
+    padding={["bottom", "top"]} 
+    background="dark">
+    <GridBlock
+      contents={[
+        {
+          content:
+            `
+\`\`\`
+brew tap goby-lang/goby
+brew install goby
+\`\`\`
+          `,
+          imageAlign: "right",
+          image: `${siteConfig.baseUrl}img/code.svg`,
+          title: "Quick Setup"
+        }
+      ]}
+      layout="twoColumn"
+    />
+  </Container>
 );
-const IGB = props => (
-  <Block id="igb" background="dark">
-    {[
-      {
-        content: '## Try Goby inside `igb`',
-        image: imgUrl('igb.gif'),
-        imageAlign: 'left',
-        title: '# Interactive Console',
-      },
-    ]}
-  </Block>
+const TryIt = props => (
+  <Container 
+    padding={["bottom", "top"]} 
+    background="light">
+    <GridBlock
+      contents={[
+        {
+          content:
+            `
+Just type
+\`\`\`
+goby -i
+\`\`\`
+Then you can enter the Goby's REPL(igb)
+
+          `,
+          imageAlign: "left",
+          image: imgUrl('igb.gif'),
+          title: "Try it in Interactive Mode"
+        }
+      ]}
+      layout="twoColumn"
+    />
+  </Container>
+
 );
 const LearnHow = props => (
-  <Block background="light">
+  <Block background="dark">
     {[
       {
         content: 'Talk about learning how to use this',
@@ -211,8 +236,8 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />
-          <Concurrency />
-          <IGB />
+          <QuickSetup />
+          <TryIt />
           <LearnHow />
           <Showcase language={language} />
         </div>
