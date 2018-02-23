@@ -1,0 +1,89 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Thread and Channel · Goby</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Thread and Channel · Goby"/><meta property="og:type" content="website"/><meta property="og:url" content="https://goby-lang.github.io/index.html"/><meta property="og:description" content="Goby interpreter adopts Golang for language implementations, mainly for fully utilizing Golang&#x27;s concurrency mechanisms. Thus Goby naturally equips thread and channel feature with the help of underlying Golang."/><meta property="og:image" content="https://goby-lang.github.io/img/goby-logo.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/goby-logo.svg"/><h2 class="headerTitle">Goby</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/docs/introduction.html" target="_self">Introduction</a></li><li><a href="https://sample.goby-lang.org" target="_self">Sample Site</a></li><li><a href="https://github.com/goby-lang/goby" target="_self">GitHub</a></li><li><a href="https://goby-lang-slackin.herokuapp.com/" target="_self">Join Slack!</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Features</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Get Startted</h3><ul><li class="navListItem"><a class="navItem" href="/docs/introduction.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/installation.html">Installation</a></li></ul></div><div class="navGroup navGroupActive"><h3>Features</h3><ul><li class="navListItem"><a class="navItem" href="/docs/plugin-system.html">Plugin System</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/thread-and-channel.html">Thread and Channel</a></li><li class="navListItem"><a class="navItem" href="/docs/simple-server.html">SimpleServer (builtin multi-threaded http server)</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Thread and Channel</h1></header><article><div><span><p>Goby interpreter adopts Golang for language implementations, mainly for fully utilizing Golang's concurrency mechanisms. Thus Goby naturally equips thread and channel feature with the help of underlying Golang.</p>
+<h2><a class="anchor" aria-hidden="true" name="topics-related-to-concurrency-programming"></a><a href="#topics-related-to-concurrency-programming" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Topics Related to Concurrency Programming</h2>
+<p>To understand more on concurrency programming, there are some resources we recommended you to read through it:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=cN_DpYBzKso">Concurrency is not Parallelism</a> by Rob Pike</li>
+<li><a href="https://www.youtube.com/watch?v=f6kdp27TYZs">Go's Concurrency Pattern</a> by Rob Pike</li>
+<li><a href="https://engineering.universe.com/introduction-to-concurrency-models-with-ruby-part-i-550d0dbb970">Introduction to Concurrency Models in Ruby Part (I)</a> on Medium by exAspArk</li>
+<li><a href="https://engineering.universe.com/introduction-to-concurrency-models-with-ruby-part-ii-c39c7e612bed">Introduction to Concurrency Models in Ruby Part (II)</a> on Medium by exAspArk</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" name="thread"></a><a href="#thread" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Thread</h3>
+<p>Every Goby thread runs on a new goroutine. And unlike Ruby, there's <strong>no</strong> <code>Thread</code> class in Goby. To create a thread, just use thread method with a <code>do</code> - <code>end</code> block:</p>
+<pre><code class="hljs css ruby">thread <span class="hljs-keyword">do</span>
+  <span class="hljs-comment"># Write whatever you want to do</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Goby's do - endblock is transparent for variables and it is possible to access variables across the thread block:</p>
+<pre><code class="hljs css ruby">i = <span class="hljs-number">0</span>
+
+thread <span class="hljs-keyword">do</span>
+  i += <span class="hljs-number">1</span>
+  puts(i) <span class="hljs-comment">#=&gt; 1</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>This is convenient for manipulating data in many cases, but can cause some problems. You should avoid something like:</p>
+<pre><code class="hljs css ruby">i = <span class="hljs-number">0</span>
+
+<span class="hljs-number">1000</span>.times <span class="hljs-keyword">do</span>
+  thread <span class="hljs-keyword">do</span>    <span class="hljs-comment"># avoid creating many threads repeatedly</span>
+    i += <span class="hljs-number">1</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+puts(i)
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css ruby">i = <span class="hljs-number">0</span>     
+thread <span class="hljs-keyword">do</span>
+  i += <span class="hljs-number">1</span>        <span class="hljs-comment"># avoid non-Channel variables for communicating outside</span>
+<span class="hljs-keyword">end</span>
+
+i += <span class="hljs-number">1</span>
+i
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" name="channel"></a><a href="#channel" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Channel</h2>
+<p>To communicate between threads, we need to use Channel object to do that. Channel object has two methods: <code>#deliver (passing object)</code> and <code>#receive (receiving object)</code></p>
+<pre><code class="hljs css ruby">c = Channel.new
+
+thread <span class="hljs-keyword">do</span>
+  c.deliver <span class="hljs-number">10</span>
+<span class="hljs-keyword">end</span>
+
+puts(c.receive) <span class="hljs-comment">#=&gt; 10</span>
+</code></pre>
+<p>And Goby's <code>Channel</code> inherits Go channel's blocking behavior, so you can use it to do flow control</p>
+<pre><code class="hljs">c = Channel.new
+
+i = 0
+thread do
+  i += 1
+  c.deliver(i)
+end
+
+c.receive
+i += 1 <span class="hljs-comment"># This will not execute until the thread ends</span>
+i
+</code></pre>
+<p>But unlike Go's channel has type restriction, Goby's channel can pass everything. So it's possible to process one thing in other thread and send it back to main thread.</p>
+<pre><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bar</span></span>
+    <span class="hljs-number">100</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+c = Channel.new
+
+thread <span class="hljs-keyword">do</span>
+  f = Foo.new
+  c.deliver(f)
+<span class="hljs-keyword">end</span>
+
+puts(c.receive.bar) <span class="hljs-comment">#=&gt; 100</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="plugin-system.html">← Plugin System</a><a class="docs-next button" href="simple-server.html">SimpleServer (builtin multi-threaded http server) →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/introduction.html">Introduction</a><a href="/docs/en/installation.html">Installation</a></div><div><h5>Community</h5><a href="https://sample.goby-lang.org" target="_blank">Sample Site</a><a href="https://goby-lang-slackin.herokuapp.com/">Slack</a><a href="https://twitter.com/goby_lang" target="_blank">Twitter</a></div><div><h5>More</h5><a href="https://medium.com/goby-lang">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/goby-lang/goby" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>
