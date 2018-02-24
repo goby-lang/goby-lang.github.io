@@ -18,7 +18,8 @@ const users = [
 const siteConfig = {
   title: 'Goby',
   tagline: 'Inherits from Ruby, extended with Golang',
-  url: 'https://goby-lang.github.io' /* your website url */,
+  url: 'https://goby-lang.org' /* your website url */,
+  cname: 'goby-lang.org',
   baseUrl: '/' /* base url for your project */,
   projectName: 'goby-lang.github.io',
   organizationName: 'goby-lang',
@@ -34,7 +35,6 @@ const siteConfig = {
   ],
   users,
   /* path to images for header/footer */
-  // headerIcon: 'img/goby-logo.png',
   // footerIcon: 'img/goby-logo.png',
   favicon: 'img/favicon.png',
   /* colors for website */
