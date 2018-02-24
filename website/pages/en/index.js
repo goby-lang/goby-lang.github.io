@@ -51,7 +51,7 @@ const SplashContainer = props => (
 );
 
 const Logo = props => (
-  <div className="projectLogo">
+  <div className="projectTitle projectTitleLogo">
     <img src={props.img_src} />
   </div>
 );
@@ -77,7 +77,7 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
-          <ProjectTitle />
+          <Logo img_src={imgUrl('goby-logo.svg')}/>
           <PromoSection>
             <Button href={docUrl('introduction.html', language)}>Introduction</Button>
             <Button href={docUrl('installation.html', language)}>Installation</Button>
