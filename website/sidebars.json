@@ -8,6 +8,9 @@
       "plugin-system",
       "thread-and-channel",
       "simple-server"
+    ],
+    "Language": [
+      "variable-and-constant"
     ]
   }
 }

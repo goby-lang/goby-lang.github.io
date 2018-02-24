@@ -10,11 +10,13 @@
     "plugin-system": "Plugin System",
     "simple-server": "SimpleServer",
     "thread-and-channel": "Thread and Channel",
+    "variable-and-constant": "Variable and Constant",
     "Sample Site": "Sample Site",
     "GitHub": "GitHub",
     "Join our Slack!": "Join our Slack!",
     "Get Startted": "Get Startted",
-    "Features": "Features"
+    "Features": "Features",
+    "Language": "Language"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
