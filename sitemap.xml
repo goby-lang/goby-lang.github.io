@@ -13,4 +13,5 @@
 <url> <loc>https://goby-lang.github.io/docs/plugin-system.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/plugin-system.html" /> </url>
 <url> <loc>https://goby-lang.github.io/docs/simple-server.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/simple-server.html" /> </url>
 <url> <loc>https://goby-lang.github.io/docs/thread-and-channel.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/thread-and-channel.html" /> </url>
+<url> <loc>https://goby-lang.github.io/docs/variable-and-constant.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/variable-and-constant.html" /> </url>
 </urlset>
