@@ -1839,3 +1839,6 @@ footer .copyright {
   height: 300px;
 }
 
+.projectTitleLogo img {
+  max-width: 200px;
+}
