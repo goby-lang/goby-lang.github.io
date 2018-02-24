@@ -1,6 +1,6 @@
 ---
 id: simple-server
-title: SimpleServer (builtin multi-threaded http server)
+title: SimpleServer
 ---
 
 ## Getting Started

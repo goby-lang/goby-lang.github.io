@@ -8,7 +8,7 @@
     "introduction": "Introduction",
     "Introduction": "Introduction",
     "plugin-system": "Plugin System",
-    "simple-server": "SimpleServer (builtin multi-threaded http server)",
+    "simple-server": "SimpleServer",
     "thread-and-channel": "Thread and Channel",
     "Sample Site": "Sample Site",
     "GitHub": "GitHub",
