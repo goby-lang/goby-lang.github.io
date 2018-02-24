@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://goby-lang.github.io/help.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/en/help.html" /> </url>
-<url> <loc>https://goby-lang.github.io/index.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/en/index.html" /> </url>
-<url> <loc>https://goby-lang.github.io/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/en/users.html" /> </url>
-<url> <loc>https://goby-lang.github.io/blog/2017/10/24/new-version-1.0.0.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://goby-lang.github.io/blog/2017/09/26/adding-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://goby-lang.github.io/blog/2017/09/25/testing-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://goby-lang.github.io/blog/2017/04/10/blog-post-two.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://goby-lang.github.io/blog/2016/03/11/blog-post.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://goby-lang.github.io/docs/installation.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/installation.html" /> </url>
-<url> <loc>https://goby-lang.github.io/docs/introduction.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/introduction.html" /> </url>
-<url> <loc>https://goby-lang.github.io/docs/plugin-system.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/plugin-system.html" /> </url>
-<url> <loc>https://goby-lang.github.io/docs/simple-server.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/simple-server.html" /> </url>
-<url> <loc>https://goby-lang.github.io/docs/thread-and-channel.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/thread-and-channel.html" /> </url>
-<url> <loc>https://goby-lang.github.io/docs/variable-and-constant.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.github.io/docs/variable-and-constant.html" /> </url>
+<url> <loc>https://goby-lang.org/help.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/en/help.html" /> </url>
+<url> <loc>https://goby-lang.org/index.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/en/index.html" /> </url>
+<url> <loc>https://goby-lang.org/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/en/users.html" /> </url>
+<url> <loc>https://goby-lang.org/blog/2017/10/24/new-version-1.0.0.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://goby-lang.org/blog/2017/09/26/adding-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://goby-lang.org/blog/2017/09/25/testing-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://goby-lang.org/blog/2017/04/10/blog-post-two.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://goby-lang.org/blog/2016/03/11/blog-post.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://goby-lang.org/docs/installation.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/installation.html" /> </url>
+<url> <loc>https://goby-lang.org/docs/introduction.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/introduction.html" /> </url>
+<url> <loc>https://goby-lang.org/docs/plugin-system.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/plugin-system.html" /> </url>
+<url> <loc>https://goby-lang.org/docs/simple-server.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/simple-server.html" /> </url>
+<url> <loc>https://goby-lang.org/docs/thread-and-channel.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/thread-and-channel.html" /> </url>
+<url> <loc>https://goby-lang.org/docs/variable-and-constant.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/variable-and-constant.html" /> </url>
 </urlset>
