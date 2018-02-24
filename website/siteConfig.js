@@ -23,12 +23,12 @@ const siteConfig = {
   projectName: 'goby-lang.github.io',
   organizationName: 'goby-lang',
   ogImage: 'img/goby-logo.png',
-  headerIcon: 'img/goby-logo.svg',
+  // headerIcon: 'img/goby-logo.svg',
   headerLinks: [
     {doc: 'introduction', label: 'Introduction'},
     {href: 'https://sample.goby-lang.org', label: "Sample Site"},
     {href: 'https://github.com/goby-lang/goby', label: "GitHub"},
-    {href: 'https://goby-lang-slackin.herokuapp.com/', label: "Join Slack!"},
+    {href: 'https://goby-lang-slackin.herokuapp.com/', label: "Join our Slack!"},
 
     // {blog: false, label: 'Blog'},
   ],
@@ -39,8 +39,8 @@ const siteConfig = {
   favicon: 'img/favicon.png',
   /* colors for website */
   colors: {
-    primaryColor: '#FF903E',
-    secondaryColor: '#FBA86F',
+    primaryColor: '#f26b00',
+    secondaryColor: '#f26b00',
   },
   /* custom fonts for website */
   /*fonts: {
@@ -57,7 +57,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Your Name or Your Company Name',
+    ' goby-lang.org',
   // organizationName: 'deltice', // or set an env variable ORGANIZATION_NAME
   // projectName: 'test-site', // or set an env variable PROJECT_NAME
   highlight: {

@@ -143,8 +143,8 @@ const QuickSetup = props => (
           content:
             `
 \`\`\`
-brew tap goby-lang/goby
-brew install goby
+$ brew tap goby-lang/goby
+$ brew install goby
 \`\`\`
           `,
           imageAlign: "right",
@@ -158,6 +158,7 @@ brew install goby
 );
 const TryIt = props => (
   <Container 
+    className="imageMedium"
     padding={["bottom", "top"]} 
     background="light">
     <GridBlock
@@ -165,11 +166,10 @@ const TryIt = props => (
         {
           content:
             `
-Just type
+Just run
 \`\`\`
-goby -i
+$ goby -i
 \`\`\`
-Then you can enter the Goby's REPL(igb)
 
           `,
           imageAlign: "left",
@@ -182,17 +182,26 @@ Then you can enter the Goby's REPL(igb)
   </Container>
 
 );
-const LearnHow = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Learn How',
-      },
-    ]}
-  </Block>
+const JoinUs = props => (
+  <Container 
+    className="imageSmall"
+    padding={["bottom", "top"]} 
+    background="dark">
+    <GridBlock
+      contents={[
+        {
+          content:
+            `
+Join our community on [Slack](https://goby-lang-slackin.herokuapp.com/). Or follow us on [Twitter](https://twitter.com/goby_lang)
+          `,
+          imageAlign: "right",
+          image: `${siteConfig.baseUrl}img/slack-and-twitter.png`,
+          title: "Join Goby's community"
+        }
+      ]}
+      layout="twoColumn"
+    />
+  </Container>
 );
 
 
@@ -238,7 +247,7 @@ class Index extends React.Component {
           <Features />
           <QuickSetup />
           <TryIt />
-          <LearnHow />
+          <JoinUs />
           <Showcase language={language} />
         </div>
       </div>
