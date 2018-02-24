@@ -76,7 +76,7 @@ puts(c.receive) #=> 10
 
 And Goby's `Channel` inherits Go channel's blocking behavior, so you can use it to do flow control
 
-```
+```ruby
 c = Channel.new
 
 i = 0
@@ -92,7 +92,7 @@ i
 
 But unlike Go's channel has type restriction, Goby's channel can pass everything. So it's possible to process one thing in other thread and send it back to main thread.
 
-```
+```ruby
 class Foo
   def bar
     100
