@@ -6,8 +6,8 @@
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://goby-lang.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Goby news and events.</subtitle>
-    <logo>https://goby-lang.github.io/img/goby-logo.svg</logo>
-    <rights>Copyright © 2018 Your Name or Your Company Name</rights>
+    <logo>https://goby-lang.github.io/undefined</logo>
+    <rights>Copyright © 2018 goby-lang.org</rights>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>
         <id>https://goby-lang.github.io/blog/2017/10/24/new-version-1.0.0.html</id>
