@@ -10,7 +10,11 @@
       "simple-server"
     ],
     "Language": [
-      "variable-and-constant"
+      "class-and-module",
+      "variable-and-constant",
+      "method-definition",
+      "method-call",
+      "flow-control"
     ]
   }
 }
