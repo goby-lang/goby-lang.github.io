@@ -8,8 +8,12 @@
 <url> <loc>https://goby-lang.org/blog/2017/09/25/testing-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://goby-lang.org/blog/2017/04/10/blog-post-two.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://goby-lang.org/blog/2016/03/11/blog-post.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://goby-lang.org/docs/class-and-module.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/class-and-module.html" /> </url>
+<url> <loc>https://goby-lang.org/docs/flow-control.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/flow-control.html" /> </url>
 <url> <loc>https://goby-lang.org/docs/installation.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/installation.html" /> </url>
 <url> <loc>https://goby-lang.org/docs/introduction.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/introduction.html" /> </url>
+<url> <loc>https://goby-lang.org/docs/method-call.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/method-call.html" /> </url>
+<url> <loc>https://goby-lang.org/docs/method-definition.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/method-definition.html" /> </url>
 <url> <loc>https://goby-lang.org/docs/plugin-system.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/plugin-system.html" /> </url>
 <url> <loc>https://goby-lang.org/docs/simple-server.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/simple-server.html" /> </url>
 <url> <loc>https://goby-lang.org/docs/thread-and-channel.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/thread-and-channel.html" /> </url>
