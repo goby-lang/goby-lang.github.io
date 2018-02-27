@@ -26,7 +26,7 @@ const siteConfig = {
   ogImage: 'img/goby-logo.png',
   // headerIcon: 'img/goby-logo.svg',
   headerLinks: [
-    {doc: 'introduction', label: 'Introduction'},
+    {doc: 'introduction', label: 'Docs'},
     {href: 'https://sample.goby-lang.org', label: "Sample Site"},
     {href: 'https://github.com/goby-lang/goby', label: "GitHub"},
     {href: 'https://goby-lang-slackin.herokuapp.com/', label: "Join our Slack!"},

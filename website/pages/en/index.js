@@ -79,8 +79,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <Logo img_src={imgUrl('goby-logo.svg')}/>
           <PromoSection>
-            <Button href={docUrl('introduction.html', language)}>Introduction</Button>
             <Button href={docUrl('installation.html', language)}>Installation</Button>
+            <Button href={docUrl('introduction.html', language)}>Documents</Button>
           </PromoSection>
         </div>
       </SplashContainer>
