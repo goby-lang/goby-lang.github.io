@@ -9,6 +9,7 @@
 <url> <loc>https://goby-lang.org/blog/2017/04/10/blog-post-two.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://goby-lang.org/blog/2016/03/11/blog-post.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://goby-lang.org/docs/class-and-module.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/class-and-module.html" /> </url>
+<url> <loc>https://goby-lang.org/docs/easy-json-rendering.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/easy-json-rendering.html" /> </url>
 <url> <loc>https://goby-lang.org/docs/flow-control.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/flow-control.html" /> </url>
 <url> <loc>https://goby-lang.org/docs/installation.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/installation.html" /> </url>
 <url> <loc>https://goby-lang.org/docs/introduction.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://goby-lang.org/docs/introduction.html" /> </url>
