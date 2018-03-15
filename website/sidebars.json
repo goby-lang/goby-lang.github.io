@@ -7,7 +7,8 @@
     "Features": [
       "plugin-system",
       "thread-and-channel",
-      "simple-server"
+      "simple-server",
+      "easy-json-rendering"
     ],
     "Language": [
       "class-and-module",
