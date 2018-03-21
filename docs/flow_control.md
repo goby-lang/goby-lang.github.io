@@ -4,10 +4,10 @@ title: Flow Control
 ---
 
 Goby supports several ways to do flow control, like:
-- if statement
-- case statement
-- while loop
-- `break` keyword
+- `if` statement
+- `break` statement
+- `case` statement
+- `while` statement
 
 ## If Statement
 
@@ -48,3 +48,58 @@ end
 
 puts(b) #=> nil
 ```
+
+## `break` Statement
+
+```ruby
+def foo(tail)
+  (5..tail).each do |t|
+    if t % 2 == 0 && t % 5 == 0
+      puts "ouch!"
+      break
+    else
+      puts t
+    end
+  end
+  puts "out of the block"
+end
+
+foo 20
+#=> 5 6 7 8 9
+#=> ouch!
+#=> out of the block
+```
+
+## `case` statement
+
+```ruby
+def foo(str)
+  case str
+  when "Elf"
+    puts "You might be Aragorn II!"
+  when "Aragorn"
+    puts "Long time no see, Aragorn!"
+  when "Frodo", "Sam", "Gandalf"
+    puts "One of us!"
+  else
+    puts "You're not yourself"
+  end
+end
+```
+
+`case`, `when`, `else` can be used.
+
+## `while` statement
+
+```ruby
+decr = 10
+while decr do
+  if decr < 1
+    break
+  end
+  puts decr
+  decr -= 1
+end
+```
+
+`while`, conditional and a `do`/`end` block can be used for a loop
