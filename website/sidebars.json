@@ -8,7 +8,8 @@
       "plugin-system",
       "thread-and-channel",
       "simple-server",
-      "easy-json-rendering"
+      "easy-json-rendering",
+      "load-library-and-files"
     ],
     "Language": [
       "class-and-module",
