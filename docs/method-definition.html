@@ -1,39 +1,187 @@
-<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Method Definition · Goby</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Method Definition · Goby"/><meta property="og:type" content="website"/><meta property="og:url" content="https://goby-lang.org/index.html"/><meta property="og:description" content="This is a sample of method definition in Goby"/><meta property="og:image" content="https://goby-lang.org/img/goby-logo.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Goby</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/docs/introduction.html" target="_self">Docs</a></li><li><a href="https://sample.goby-lang.org" target="_self">Sample Site</a></li><li><a href="https://github.com/goby-lang/goby" target="_self">GitHub</a></li><li><a href="https://goby-lang-slackin.herokuapp.com/" target="_self">Join our Slack!</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Language</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Get Startted</h3><ul><li class="navListItem"><a class="navItem" href="/docs/introduction.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/installation.html">Installation</a></li></ul></div><div class="navGroup navGroupActive"><h3>Features</h3><ul><li class="navListItem"><a class="navItem" href="/docs/plugin-system.html">Plugin System</a></li><li class="navListItem"><a class="navItem" href="/docs/thread-and-channel.html">Thread and Channel</a></li><li class="navListItem"><a class="navItem" href="/docs/simple-server.html">SimpleServer</a></li><li class="navListItem"><a class="navItem" href="/docs/easy-json-rendering.html">Easy JSON Rendering</a></li></ul></div><div class="navGroup navGroupActive"><h3>Language</h3><ul><li class="navListItem"><a class="navItem" href="/docs/class-and-module.html">Class and Module</a></li><li class="navListItem"><a class="navItem" href="/docs/variable-and-constant.html">Variable, Constant and Assignment</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/method-definition.html">Method Definition</a></li><li class="navListItem"><a class="navItem" href="/docs/method-call.html">Method Call</a></li><li class="navListItem"><a class="navItem" href="/docs/flow-control.html">Flow Control</a></li></ul></div></div></section></div><script>
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Method Definition · Goby</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Method Definition · Goby"/><meta property="og:type" content="website"/><meta property="og:url" content="https://goby-lang.org/index.html"/><meta property="og:description" content="### Method definition and calling"/><meta property="og:image" content="https://goby-lang.org/img/goby-logo.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Goby</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/docs/introduction.html" target="_self">Docs</a></li><li><a href="https://sample.goby-lang.org" target="_self">Sample Site</a></li><li><a href="https://github.com/goby-lang/goby" target="_self">GitHub</a></li><li><a href="https://goby-lang-slackin.herokuapp.com/" target="_self">Join our Slack!</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Language</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Get Startted</h3><ul><li class="navListItem"><a class="navItem" href="/docs/introduction.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/installation.html">Installation</a></li></ul></div><div class="navGroup navGroupActive"><h3>Features</h3><ul><li class="navListItem"><a class="navItem" href="/docs/plugin-system.html">Plugin System</a></li><li class="navListItem"><a class="navItem" href="/docs/thread-and-channel.html">Thread and Channel</a></li><li class="navListItem"><a class="navItem" href="/docs/simple-server.html">SimpleServer</a></li><li class="navListItem"><a class="navItem" href="/docs/easy-json-rendering.html">Easy JSON Rendering</a></li><li class="navListItem"><a class="navItem" href="/docs/load-library-and-files.html">Load Library and Files</a></li></ul></div><div class="navGroup navGroupActive"><h3>Language</h3><ul><li class="navListItem"><a class="navItem" href="/docs/class-and-module.html">Class and Module</a></li><li class="navListItem"><a class="navItem" href="/docs/variable-and-constant.html">Variable, Constant and Assignment</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/method-definition.html">Method Definition</a></li><li class="navListItem"><a class="navItem" href="/docs/method-call.html">Method Call</a></li><li class="navListItem"><a class="navItem" href="/docs/flow-control.html">Flow Control</a></li></ul></div></div></section></div><script>
           var toggler = document.getElementById('navToggler');
           var nav = document.getElementById('docsNav');
           toggler.onclick = function() {
             nav.classList.toggle('docsSliderActive');
           };
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Method Definition</h1></header><article><div><span><p>This is a sample of method definition in Goby</p>
-<pre><code class="hljs css ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">foo</span></span>
-  <span class="hljs-number">10</span>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Method Definition</h1></header><article><div><span><h3><a class="anchor" aria-hidden="true" name="method-definition-and-calling"></a><a href="#method-definition-and-calling" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Method definition and calling</h3>
+<pre><code class="hljs css ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">foo_bar</span><span class="hljs-params">(baz)</span></span>
+  puts baz
 <span class="hljs-keyword">end</span>
 
-puts(foo) <span class="hljs-comment">#=&gt; 10</span>
+foo_bar <span class="hljs-string">"Hi, Goby!"</span> <span class="hljs-comment">#=&gt; Hi, Goby!</span>
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" name="arguments"></a><a href="#arguments" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arguments</h2>
-<pre><code class="hljs css ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(x, y)</span></span>
-  x + y
+<p>Method name should be &quot;<code>[a-z][a-z0-9_]+\??</code>&quot; (snake_case). You can omit the trailing &quot;<code>()</code>&quot; only if no parameters are taken.</p>
+<pre><code class="hljs css ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">updated?</span></span>
+  <span class="hljs-literal">true</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>You can add a trailing &quot;<code>?</code>&quot;&quot; for indicating a &quot;predicate method&quot;. (using &quot;<code>!</code>&quot; is <strong>unsupported</strong>)</p>
+<p>You should always use the trailing &quot;<code>?</code>&quot; for predicate methods.</p>
+<h3><a class="anchor" aria-hidden="true" name="parameters"></a><a href="#parameters" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters</h3>
+<pre><code class="hljs css ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">foo</span><span class="hljs-params">(normal, default=<span class="hljs-string">"value"</span>, hash={}, ary=[], <span class="hljs-symbol">keyword:</span>, <span class="hljs-symbol">keyword_default:</span><span class="hljs-string">"key"</span>, *sprat)</span></span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Keep parameters <strong>at most around 2</strong> as far as possible to keep interfaces simple. The order of parameters in method definition is restricted as follows:</p>
+<ol>
+<li><strong>normal parameters</strong> (like <code>a</code>)</li>
+<li><strong>normal parameters with default value</strong> (like <code>a=1</code>)</li>
+<li><strong>optional parameters</strong> (array or hash, like <code>ary=[]</code> or <code>hs={}</code>)</li>
+<li><strong>keyword parameters</strong> (like <code>kwd:</code>)</li>
+<li><strong>keyword parameters with default value</strong> (like <code>kwd: 1</code> or <code>ary: [1,2,3]</code> or <code>hsh: {key: &quot;value&quot;}</code>)</li>
+<li><strong>splat parameters</strong> (like <code>*sp</code>)</li>
+</ol>
+<p>Or you will receive an error.</p>
+<h3><a class="anchor" aria-hidden="true" name="return-value"></a><a href="#return-value" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Return value</h3>
+<pre><code class="hljs css ruby">PI = <span class="hljs-number">3.14</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span><span class="hljs-params">(radius)</span></span>
+  radius * PI      <span class="hljs-comment"># returns the result of evaluation</span>
 <span class="hljs-keyword">end</span>
 
-add(<span class="hljs-number">10</span>, <span class="hljs-number">11</span>)  <span class="hljs-comment"># 21</span>
-add(<span class="hljs-number">10</span>)      <span class="hljs-comment"># Argument Error</span>
-add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>) <span class="hljs-comment"># Argument Error</span>
+area <span class="hljs-number">6</span>             <span class="hljs-comment">#=&gt; 18.84</span>
 </code></pre>
-<p>Just like most languages, if you requires parameters in a method, then you need to provide right number of arguments them when calling that method. Less or more would cause argument error.</p>
-<h3><a class="anchor" aria-hidden="true" name="argument-s-default-value"></a><a href="#argument-s-default-value" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Argument's default value</h3>
-<p>But in Goby, we have another way to define method parameters: give them a default value</p>
-<pre><code class="hljs css ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(x, y = <span class="hljs-number">10</span>)</span></span>
-  x + y
+<p>A method returns an object from the last-evaluated expression.</p>
+<pre><code class="hljs css ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span><span class="hljs-params">(radius)</span></span>
+  <span class="hljs-keyword">return</span> radius * PI  <span class="hljs-comment"># not recommended</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><code>return</code> keyword is supported, but in most cases it's redundant (methods would return the last value by default).</p>
+<pre><code class="hljs css ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">my_array</span></span>
+  [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
 <span class="hljs-keyword">end</span>
 
-add(<span class="hljs-number">10</span>, <span class="hljs-number">11</span>) <span class="hljs-comment"># 21</span>
-add(<span class="hljs-number">10</span>)     <span class="hljs-comment"># 20</span>
+my_array   <span class="hljs-comment">#=&gt; [1, 2, 3]</span>
 </code></pre>
-<p>However, please make sure you place the parameters with default value after those normal parameters. Otherwise, you'll get syntax error:</p>
-<pre><code class="hljs css ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">foo</span><span class="hljs-params">(x=<span class="hljs-number">10</span>, y)</span></span>
-<span class="hljs-keyword">end</span> <span class="hljs-comment">#=&gt; Normal argument "y" should be defined before Optioned argument.</span>
+<p>If you want to return multiple values, you should explicitly use an array literal <code>[ ]</code>. Returning unbracketed values like <code>1, 2, 3</code> is unsupported.</p>
+<h3><a class="anchor" aria-hidden="true" name="instance-method"></a><a href="#instance-method" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instance method</h3>
+<pre><code class="hljs css ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Foo</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bar</span></span>
+    puts <span class="hljs-string">"bar"</span>
+  <span class="hljs-keyword">end</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">baz</span><span class="hljs-params">(count, <span class="hljs-symbol">email:</span> <span class="hljs-string">"goby@example.com"</span>)</span></span>
+    count.times <span class="hljs-keyword">do</span>
+      puts email
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+foo = Foo.new
+foo.bar     <span class="hljs-comment">#=&gt; bar</span>
+foo.baz(<span class="hljs-number">3</span>)  <span class="hljs-comment">#↓</span>
+goby@example.com
+goby@example.com
+goby@example.com
 </code></pre>
+<p>You can define &quot;public&quot; instance methods by using <code>def</code> keyword within the definition of modules or classes.</p>
+<p>You can create an instance the defined modules or classes by using <code>new</code> method, like <code>Foo.new</code>.</p>
+<p>You can declare one or more parameters on the method definition by using a trailing <code>()</code>. You should always omit <code>()</code> if the method definition does not have any parameters.</p>
+<h3><a class="anchor" aria-hidden="true" name="singleton-method-class-method-module-method"></a><a href="#singleton-method-class-method-module-method" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Singleton method (class method/module method)</h3>
+<pre><code class="hljs css ruby">str = <span class="hljs-string">"Goby"</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">str</span>.<span class="hljs-title">foo</span>     <span class="hljs-comment">#1 singleton method on the object</span></span>
+  <span class="hljs-keyword">self</span> * <span class="hljs-number">2</span>
+<span class="hljs-keyword">end</span>
+
+str.foo
+<span class="hljs-comment">#=&gt; GobyGoby</span>
+</code></pre>
+<p>You can define <strong>singleton methods</strong> by using <code>def</code> keyword and <code>object.methodname</code> notation. <code>self</code> is to refer to the object itself within the object.</p>
+<p>A singleton method is specific for the object that it is defined on.</p>
+<pre><code class="hljs css ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Foo</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">bar</span>  <span class="hljs-comment">#2 singleton method with `self.`</span></span>
+    <span class="hljs-number">92</span>
+  <span class="hljs-keyword">end</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Foo</span>.<span class="hljs-title">bar</span>   <span class="hljs-comment">#3 singleton method with a class name (not recommended)</span></span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>By using the notation above, you can define singleton methods on modules or classes. A singleton methods on a module is a <strong>module method</strong>, and a singleton methods on a class is a <strong>class method</strong>, but they are essentially a <strong>singleton method</strong>.</p>
+<p>Both <code>self.</code> and <code>Classname.</code> can be used, but you should use <code>self.</code> notation within the module/class definitions.</p>
+<pre><code class="hljs css ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Foo</span> <span class="hljs-title">end</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Foo</span>.<span class="hljs-title">bar</span>      <span class="hljs-comment">#4 singleton methods outside the Foo</span></span>
+  <span class="hljs-number">9999</span>
+<span class="hljs-keyword">end</span>
+
+Foo.bar <span class="hljs-comment">#=&gt; 9999</span>
+</code></pre>
+<p>You can define singleton methods by using <code>def ClassName.method_name</code> or <code>def ModuleName.method_name</code>, outside the module/class definition.</p>
+<h3><a class="anchor" aria-hidden="true" name="attribute-accessor-method"></a><a href="#attribute-accessor-method" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attribute accessor method</h3>
+<pre><code class="hljs css ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>
+  <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:bar</span>, <span class="hljs-symbol">:baz</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span></span>
+    @bar = <span class="hljs-number">42</span>
+    @baz = <span class="hljs-number">99</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+foo = Foo.new
+
+foo.bar = <span class="hljs-number">77</span>
+foo.baz = <span class="hljs-number">88</span>
+</code></pre>
+<p>You can use the following shorthands to declare attribute accessor methods in classes/modules:</p>
+<ul>
+<li><code>attr_accessor</code></li>
+<li><code>attr_reader</code></li>
+<li><code>attr_writer</code></li>
+</ul>
+<p><strong>Note</strong>: <code>attr_accessor</code> and <code>attr_writer</code> implicitly declares instance variables with the same name when assignment is occurred, but <code>attr_reader</code> is not.</p>
+<pre><code class="hljs css ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>
+  <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:foo</span>   <span class="hljs-comment"># creates `<span class="hljs-doctag">@foo</span>` when assigning to `Foo.foo`</span>
+  <span class="hljs-keyword">attr_writer</span> <span class="hljs-symbol">:bar</span>     <span class="hljs-comment"># creates `<span class="hljs-doctag">@bar</span>` when assinging to `Foo.bar`</span>
+  <span class="hljs-keyword">attr_reader</span> <span class="hljs-symbol">:baz</span>     <span class="hljs-comment"># does not automatically create any instance variables</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" name="showing-methods"></a><a href="#showing-methods" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Showing methods</h3>
+<pre><code class="hljs css ruby">String.methods
+<span class="hljs-comment">#» ["fmt", "new", "&lt;", "&lt;=", "&gt;", "&gt;=", "ancestors", "attr_accessor", "attr_reader", "attr_writer", "extend", "include", "name", "superclass", "!", "!=", "==", "block_given?", "class", "exit", "instance_eval", "instance_variable_get", "instance_variable_set", "is_a?", "methods", "nil?", "object_id", "puts", "raise", "require", "require_relative", "send", "singleton_class", "sleep", "thread", "to_s"]</span>
+
+» <span class="hljs-string">"string"</span>.methods
+<span class="hljs-comment">#» ["!=", "*", "+", "&lt;", "&lt;=&gt;", "==", "=~", "&gt;", "[]", "[]=", "capitalize", "chop", "concat", "count", "delete", "downcase", "each_byte", "each_char", "each_line", "empty?", "end_with?", "eql?", "fmt", "include?", "insert", "length", "ljust", "match", "new", "replace", "replace_once", "reverse", "rjust", "size", "slice", "split", "start_with", "strip", "to_a", "to_bytes", "to_d", "to_f", "to_i", "to_s", "upcase", "!", "block_given?", "class", "exit", "instance_eval", "instance_variable_get", "instance_variable_set", "is_a?", "methods", "nil?", "object_id", "puts", "raise", "require", "require_relative", "send", "singleton_class", "sleep", "thread"]</span>
+</code></pre>
+<p>You can call <code>#methods</code> against on objects (classes and instances) to show methods.</p>
+<h2><a class="anchor" aria-hidden="true" name="features-to-implemented"></a><a href="#features-to-implemented" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Features to Implemented</h2>
+<h3><a class="anchor" aria-hidden="true" name="private-method-to-be-implemented"></a><a href="#private-method-to-be-implemented" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Private method (to be implemented)</h3>
+<pre><code class="hljs css ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bar</span></span>
+    <span class="hljs-number">42</span>
+  <span class="hljs-keyword">end</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_baz</span>  <span class="hljs-comment"># private method</span></span>
+    <span class="hljs-number">99</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Methods that starts with &quot;<code>_</code>&quot;, like &quot;<code>_baz</code>&quot;, declares that they are &quot;private&quot;. You cannot call them from outside the class/module.</p>
+<h3><a class="anchor" aria-hidden="true" name="fyi-private-attribute-methods-to-be-implemented"></a><a href="#fyi-private-attribute-methods-to-be-implemented" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FYI: Private attribute methods (to be implemented)</h3>
+<pre><code class="hljs css ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>
+  <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:_bar</span>, <span class="hljs-symbol">:_baz</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span></span>
+    @bar = <span class="hljs-number">42</span>
+    @baz = <span class="hljs-number">99</span>
+  <span class="hljs-keyword">end</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">boo</span></span>
+    _bar = _bar * <span class="hljs-number">2</span>
+    _baz = _baz + <span class="hljs-number">2</span>
+    puts _bar
+    puts _baz
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+foo = Foo.new
+
+foo.boo
+<span class="hljs-comment">#=&gt; 84</span>
+<span class="hljs-comment">#=&gt; 101</span>
+
+foo.bar <span class="hljs-comment"># Error</span>
+foo.baz <span class="hljs-comment"># Error</span>
+</code></pre>
+<p>You can also make the attribute accessor methods private with <code>_</code> for private use.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="variable-and-constant.html">← Variable, Constant and Assignment</a><a class="docs-next button" href="method-call.html">Method Call →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/introduction.html">Introduction</a><a href="/docs/en/installation.html">Installation</a></div><div><h5>Community</h5><a href="https://sample.goby-lang.org" target="_blank">Sample Site</a><a href="https://goby-lang-slackin.herokuapp.com/">Slack</a><a href="https://twitter.com/goby_lang" target="_blank">Twitter</a></div><div><h5>More</h5><a href="https://medium.com/goby-lang">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/goby-lang/goby" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
