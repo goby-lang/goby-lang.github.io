@@ -5,8 +5,6 @@ title: Plugin System
 ## Introduction
 `Plugin System` is one of the Goby's best feature. It allows you to [load and access Go files during runtime](#use-existed-go-file-with-use-method-). Or you can even use it to [compose several Go packages into a custom plugin](#generate-a-plugin-dynamically-with-generate-method-) on the fly, and use it very easily!
 
-(This feature is currently experimental because it relies on Go's plugin build mode, which is only supported on linux for now. And it also has several prerequisites or restrictions, see the notes section.)
-
 ## Usages
 There are two ways to use the Plugin class:
 
@@ -113,7 +111,7 @@ The rest of the details are the same as the `Plugin#use` method, it compiles the
 ![](/img/plugin-generate.png)
 
 ## Notes
-- This feature can only run on `linux` for now, so if you want to play with it I suggest you using docker
+- This feature can only run on `linux` and `macOS` for now
 - You need to [setup Go's environment](https://golang.org/doc/install) if you want to import Go packages in your plugin. Also, those packages need to be downloaded via `go get` command. For these reasons, I still recommend using Docker when playing with this feature so you can setup environment via Dockerfile.
 
 - The plugin binary generation could take a few seconds, so store the `Plugin` object in a constant might be a good practice.
