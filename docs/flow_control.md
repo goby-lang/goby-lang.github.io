@@ -19,6 +19,7 @@ if foo
 end
 
 bar if foo # Not allowed
+
 ```
 
 Also, Goby also support both else and elsif keywords.
@@ -47,6 +48,7 @@ b = if false
 end
 
 puts(b) #=> nil
+
 ```
 
 ## `break` Statement
@@ -68,6 +70,7 @@ foo 20
 #=> 5 6 7 8 9
 #=> ouch!
 #=> out of the block
+
 ```
 
 ## `case` statement

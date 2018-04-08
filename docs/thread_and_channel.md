@@ -51,7 +51,7 @@ puts(i)
 or
 
 ```ruby
-i = 0     
+i = 0
 thread do
   i += 1        # avoid non-Channel variables for communicating outside
 end
@@ -72,6 +72,7 @@ thread do
 end
 
 puts(c.receive) #=> 10
+
 ```
 
 And Goby's `Channel` inherits Go channel's blocking behavior, so you can use it to do flow control
@@ -107,4 +108,54 @@ thread do
 end
 
 puts(c.receive.bar) #=> 100
+
 ```
+
+### Concurrent array
+
+```ruby
+require 'concurrent/array'
+a = Concurrent::Array.new([1, 2 ,3 ,5 , 10])
+a[0] = a[1] + a[2] + a[3] * a[4]
+```
+
+`Concurrent::Array` is a thread-safe Array class, implemented as a wrapper of an ArrayObject, coupled with an R/W mutex.
+
+We don't implement `dig` to the class, as it has no concurrency guarantees.
+
+### Concurrent hash
+
+```ruby
+require 'concurrent/hash'
+hash = Concurrent::Hash.new({ "a": 1, "b": 2 })
+hash["a"]  # => 1
+
+```
+
+`Concurrent::Hash` is an implementation of thread-safe associative arrays (Hash).
+
+The implementation internally uses Go's `sync.Map` type, with some advantages and disadvantages:
+
+- It is highly performant and predictable for a certain pattern of usage:
+  - *concurrent loops with keys that are stable over time, and either few steady-state stores, or stores localized to one goroutine per key*
+- Performance and predictability in other conditions are unspecified
+- Iterations are non-deterministic; during iterations, keys may not be included
+- Size can't be retrieved
+- For the reasons above, the Hash APIs implemented are minimal
+
+For details, see https://golang.org/pkg/sync/#Map.
+
+### Concurrent rw rock
+
+```ruby
+require 'concurrent/rw_lock'
+lock = Concurrent::RWLock.new
+lock.with_read_lock do
+  # critical section
+end
+lock.with_write_lock do
+  # critical section
+end
+```
+
+`Concurrent::RWLock` is a Readers-Writer Lock (readers can concurrently put a lock, while a writer requires exclusive access). The implementation internally uses Go's `sync.RWLock` type.

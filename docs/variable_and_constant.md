@@ -12,8 +12,47 @@ Current Goby supports only two types of variables: **local** and **instance** va
 
 ```ruby
 foo = "foo" # local variable
-@bar = "bar" # instance variable
+
 ```
+
+```ruby
+module State
+  def initialize(state)
+    @state = state      # declaring an instance variable by assignment
+  end
+  def show
+    @state              # accessible from other instance methods
+  end
+end
+
+state = State.new "success"
+state.show
+#=> success
+
+```
+
+### Scope
+
+* local/instance variables:
+  - from the line the variable is declared
+  - to the end of the current **block** or the current **method**/**module**/**class** definition
+
+```ruby
+class Foo
+  outside = 42
+  def bar
+    outside * 2
+  end
+end
+
+Foo.bar
+#=> UndefinedMethodError: Undefined Method 'outside' for <Instance of: Foo>
+
+```
+
+**Note**: declaring instance variables **outside** the method definition, it will become a kind of **singleton class variable**(in Ruby, this is called a confusing "class instance variable") with a very narrow scope (the class itself), thus only accessible from its class methods.
+
+This is a sort of side effects and is **not** recommended. Keep your declaration of instance variables within the method definitions.
 
 ## Constants
 
@@ -23,6 +62,7 @@ Goby's constant has a big difference from the one in Ruby language: Goby's const
 ```ruby
 Foo = 10
 Foo = 100 #=> ConstantAlreadyInitializedError
+
 ```
 
 Module names and class names are also constants, which can be defined with module and class keywords respectively, thus you can't assign a value to a constant if the name has already been defined as a module or a class.
@@ -34,6 +74,7 @@ Foo = 100 #=> ConstantAlreadyInitializedError
 module Foo; end
 
 Foo = 100 #=> ConstantAlreadyInitializedError
+
 ```
 
 Thus constant's declaration has a limitation: except defining classes or modules, you can only define constants to preserve initial values like:
@@ -63,6 +104,7 @@ def bar
 end
 bar
 #» ERROR: ConstantAlreadyInitializedError: Constant Const already been initialized. Can't assign value to a constant twice.. At :2
+
 ```
 
 ## Assignment
@@ -98,6 +140,7 @@ a = b = [1, 2]
 b[0] = 2
 puts(b) #=> [2, 2]
 puts(a) #=> [1, 2]
+
 ```
 
 ### Multi-variable Assignment
@@ -108,7 +151,9 @@ Multiple variable assignment is also supported in Goby:
 a, b = [1, 2]
 puts(a) #=> 1
 puts(b) #=> 2
+
 ```
+
 But we only expect the assigned value to be an Array object, which means we do not support something like:
 
 ```ruby
@@ -121,11 +166,13 @@ And if the number of array's elements are less than the number of variables, tho
 a, b = [1]
 puts(a) #=> 1
 puts(b) #=> nil
+
 ```
 
 ### Note
 
-We do not support multi-variable assignment and chained assignment for Constant, only for local variable and instance variable
+We do not support multi-variable assignment and chained assignment for **Constant**, only for local variable and instance variable.
+
 ### About Return Value
 
 In Ruby, assignment will return value if you need them, like chained assignment or assign variable in if statement's condition. Goby also support this feature, so the following use cases are all available in Goby

@@ -2,21 +2,26 @@
   "docs": {
     "Get Startted": [
       "introduction",
-      "installation"
+      "installation",
+      "hello-world",
+      "tips-tricks",
+      "terminology"
     ],
     "Features": [
       "plugin-system",
       "thread-and-channel",
       "simple-server",
       "easy-json-rendering",
-      "load-library-and-files"
+      "load-library-and-files",
+      "repl"
     ],
     "Language": [
       "class-and-module",
       "variable-and-constant",
       "method-definition",
       "method-call",
-      "flow-control"
+      "flow-control",
+      "block"
     ]
   }
 }

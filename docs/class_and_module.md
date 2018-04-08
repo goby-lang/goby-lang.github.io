@@ -24,7 +24,7 @@ end
 
 ```ruby
 module Foo
-  def foo   
+  def foo
     99
   end
 end
@@ -50,11 +50,11 @@ Baz.bar          #=> 88
 
 Modules can be included into other modules or classed via "`#include`", as well as can be used for extending other classes or modules via "`#extend`".
 
-In Goby, "**composition over inheritance**" concept is recommended. 
+In Goby, "**composition over inheritance**" concept is recommended.
 
 ```ruby
 module Foo
-  def foo   
+  def foo
     99
   end
 end
