@@ -49,3 +49,16 @@ FYI: You can just run `brew test goby` to check Homebrew installation.
 
 Goby has official [docker image](https://hub.docker.com/r/gobylang/goby/) as well. You can try the [Plugin System](https://goby-lang.gitbooks.io/goby/content/plugin-system.html) using docker.
 
+## Packaging Goby
+
+Goby searches the standard library files (`lib/**/*.gb`, in the source tree) by default in the `lib/` subdirectory, relative to the Goby binary (`goby`).
+
+Language interpreter packages usually have entirely separate paths for the interpreter binary and the standard library files. When packaging Goby, it's possible to use the `$GOBY_LIBPATH` environment variable to specify the standard library files search path of the compiled binary.
+
+For example:
+
+```sh
+GOBY_LIBPATH=/usr/lib/goby-0.1.9/lib make build
+```
+
+will compile a binary which will search standard library files in `/usr/lib/goby-0.1.9/lib`.
