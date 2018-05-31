@@ -22,7 +22,7 @@ Goby's simple server support for different kinds of HTTP verb including the `GET
 Let's say we want to create a root path with a GET action:
 
 ```ruby
-server.get "\" do |request, response|
+server.get('/') do |request, response|
   response.status = 200
   response.body   = 'Hello Visitor!'
   response.set_header('Content-Type', 'text/plain')
@@ -43,7 +43,7 @@ require 'net/simple_server'
 
 server = Net::SimpleServer.new(3000) # Create a server instance with port 3000
 
-server.get('\') do |request, response|
+server.get('/') do |request, response|
   response.status = 200
   response.body   = 'Hello Visitor!'
   response.set_header('Content-Type', 'text/plain')
