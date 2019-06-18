@@ -6,14 +6,7 @@
  */
 
 /* List of projects/orgs using your project for the users page */
-const users = [
-  {
-    caption: 'Sample site',
-    image: '/img/goby-logo.svg',
-    infoLink: 'https://sample.goby-lang.org',
-    pinned: true,
-  },
-];
+const users = [];
 
 const siteConfig = {
   title: 'Goby',
@@ -27,8 +20,8 @@ const siteConfig = {
   // headerIcon: 'img/goby-logo.svg',
   headerLinks: [
     {doc: 'introduction', label: 'Docs'},
-    {href: 'https://sample.goby-lang.org', label: "Sample Site"},
     {href: 'https://github.com/goby-lang/goby', label: "GitHub"},
+    {href: 'https://twitter.com/goby_lang', label: "Twitter"},
     {href: 'https://goby-lang-slackin.herokuapp.com/', label: "Join our Slack!"},
 
     // {blog: false, label: 'Blog'},

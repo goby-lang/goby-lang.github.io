@@ -182,29 +182,7 @@ $ goby -i
   </Container>
 
 );
-const JoinUs = props => (
-  <Container 
-    className="imageSmall"
-    padding={["bottom", "top"]} 
-    background="dark">
-    <GridBlock
-      contents={[
-        {
-          content:
-            `
-Join our community on [Slack](https://goby-lang-slackin.herokuapp.com/). Or follow us on [Twitter](https://twitter.com/goby_lang)
-          `,
-          imageAlign: "right",
-          image: `${siteConfig.baseUrl}img/slack-and-twitter.png`,
-          title: "Join Goby's community"
-        }
-      ]}
-      layout="twoColumn"
-    />
-  </Container>
-);
-
-
+const JoinUs = props => { return null };
 
 const Showcase = props => {
   if ((siteConfig.users || []).length === 0) {

@@ -43,17 +43,6 @@ class Footer extends React.Component {
             </a>
           </div>
           <div>
-            <h5>Community</h5>
-            <a href="https://sample.goby-lang.org"
-              target="_blank">
-              Sample Site
-            </a>
-            <a href="https://goby-lang-slackin.herokuapp.com/">Slack</a>
-            <a href="https://twitter.com/goby_lang" target="_blank">
-              Twitter
-            </a>
-          </div>
-          <div>
             <h5>More</h5>
             <a href="https://medium.com/goby-lang">Blog</a>
             <a href="https://github.com/goby-lang/goby">GitHub</a>
