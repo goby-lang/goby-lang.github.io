@@ -12,7 +12,6 @@ const siteConfig = {
   algolia: {
     apiKey: 'b023aa425d3aa0c853c2939891f07e19',
     indexName: 'goby-lang',
-    algoliaOptions: {} // Optional, if provided by Algolia
   },
   title: 'Goby',
   tagline: 'Inherits from Ruby, extended with Golang',
