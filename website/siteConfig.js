@@ -9,6 +9,10 @@
 const users = [];
 
 const siteConfig = {
+  algolia: {
+    apiKey: 'b023aa425d3aa0c853c2939891f07e19',
+    indexName: 'goby-lang',
+  },
   title: 'Goby',
   tagline: 'Inherits from Ruby, extended with Golang',
   url: 'https://goby-lang.org' /* your website url */,
